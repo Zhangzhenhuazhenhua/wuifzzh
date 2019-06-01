@@ -424,6 +424,10 @@ div.header a{
    border-bottom: 1px solid gray ;
     padding: 20px;
 }
+.recommend-body li:hover
+{
+    box-shadow: 2px 1px 5px #333 ;
+}
 .recommend-body li a img{
     width: 236px;
     height: 100px;
