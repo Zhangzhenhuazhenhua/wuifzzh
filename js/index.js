@@ -50,8 +50,14 @@ window.onload=function (){
         animate(bannerImg[current],{left:-w});
         animate(bannerImg[next],{left: 0});
         current=next;
+    let btn=document.querySelectorAll('.button li')
+        btn.forEach(function (ele) {
+            ele.classList.remove('hot1')
 
+        })
+        btn[next].classList.add('hot1')
     }
+
     leftBtn.onclick=function () {
         next--;
         if(next<0){
@@ -62,8 +68,26 @@ window.onload=function (){
         animate(bannerImg[current],{left:w});
         animate(bannerImg[next],{left: 0});
         current=next;
+        let btn=document.querySelectorAll('.button li')
+        btn.forEach(function (ele) {
+            ele.classList.remove('hot1')
+
+        })
+        btn[next].classList.add('hot1')
 
     }
+    let control=document.querySelector('.lr-button')
+    let ti=setInterval(rightBtn.onclick
+    ,3000)
+    control.onmouseenter=function(){
+        clearInterval(ti)
+    }
+    control.onmouseleave=function () {
+        ti=setInterval(rightBtn.onclick
+            ,3000)
+    }
+
+
 
 
 
