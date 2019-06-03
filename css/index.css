@@ -84,6 +84,7 @@ div.header a{
     height: 100%;
     float: left;
     position: relative;
+    overflow: hidden;
 }
 .banner .image-l li img{
     width: 100%;

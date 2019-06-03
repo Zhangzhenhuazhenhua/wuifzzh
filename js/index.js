@@ -42,6 +42,9 @@ window.onload=function (){
     let w=bannerImg[0].offsetWidth;
     rightBtn.onclick=function () {
         next++;
+        if (next==bannerImg.length) {
+            next=0;
+        }
 
         bannerImg[next].style.left=w+'px'
         animate(bannerImg[current],{left:-w});
@@ -50,9 +53,13 @@ window.onload=function (){
 
     }
     leftBtn.onclick=function () {
-        next++;
+        next--;
+        if(next<0){
+            next=bannerImg.length-1;
+            bannerImg[next].style.left=-w+'px';
+        }
 
-        animate(bannerImg[current],{left:-w});
+        animate(bannerImg[current],{left:w});
         animate(bannerImg[next],{left: 0});
         current=next;
 
